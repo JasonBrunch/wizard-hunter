@@ -1,0 +1,640 @@
+.debug {
+	outline: 1px solid red;
+}
+
+/* Hero Section Styles */
+.hero-section {
+	position: relative;
+	/* Ensure it can be overlaid by the header */
+	height: 100vh;
+	display: flex;
+	color: #fff;
+
+	flex-direction: column;
+	background-size: cover;
+	/* Ensures the background image covers the entire section */
+	background-position: center;
+	/* Centers the background image */
+	background-repeat: no-repeat;
+	/* Prevents the background image from repeating */
+	position: relative;
+	/* Ensure the content is positioned relative to the section */
+	z-index: 1;
+	/* Ensure it is below the header and other content */
+}
+
+.hero-section::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.034);
+	/* Adjust opacity as needed */
+	z-index: 1;
+}
+
+.hero-content {
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 2rem;
+}
+@media (min-width: 768px) {
+	.hero-content {
+		padding-top: 7rem;
+	}
+
+}
+
+
+.hero-title {
+	text-align: center;
+}
+
+
+
+
+.hero-subtitle {
+	margin-top: 0;
+}
+
+.button-container {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin-top: 1.2rem;
+
+
+}
+
+.hero-button {
+	display: flex;
+	align-items: center;
+	background-color: rgba(15, 12, 21, 0.89);
+	color: white;
+	text-decoration: none;
+	border-radius: 50px;
+	/* Pill shape */
+	padding: 0.65rem 1.5rem;
+	font-size: 1rem;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.179);
+	/* Add shadow */
+}
+
+.button-content {
+	display: flex;
+	align-items: center;
+}
+
+.steam-icon {
+	width: 40px;
+	/* Adjust size as needed */
+	height: auto;
+	margin-right: 0.75rem;
+}
+
+.button-text {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+}
+
+.download-text {
+	font-size: 0.75rem;
+	/* Smaller text */
+}
+
+.steam-text {
+	font-size: 1rem;
+	/* Larger text */
+	font-weight: bold;
+	/* Make the text bold */
+}
+
+.hero-button:hover {
+	background-color: #0073aa;
+	/* Change background color on hover */
+}
+
+/*STEAM BUTTON SECTION*/
+.steam-button-section {
+	z-index: 2;
+}
+@media (min-width: 768px){
+	.steam-button-section {
+		position: relative;
+		margin-top: -110px;
+	}
+}
+
+.steam-button-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 0 0 0;
+	background-color: #8a8a8a1d;
+	max-width: 660px;
+	margin: 0 auto;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.179);
+}
+
+.steam-widget iframe {
+	width: 646px;
+	/* Fixed width as specified */
+	height: 190px;
+	/* Fixed height as specified */
+	border: none;
+	/* Remove iframe border */
+
+}
+
+/* VIDEO SECTION */
+
+.video-section-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	gap: 4rem;
+	/* Space between video and feature container */
+}
+
+.video-container {
+	flex: 1;
+
+	border-radius: 15px;
+	/* Rounded corners */
+	position: relative;
+	overflow: hidden;
+	/* Ensure child elements don't overflow the container */
+
+}
+
+.video-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	border-radius: 15px;
+	/* Match the container's rounded corners */
+}
+
+
+
+.feature-container {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 1.3rem;
+	/* Space between feature items */
+}
+
+.feature-heading {
+	margin: 0;
+	/* Remove default margin */
+	text-align: left;
+	/* Align text to the left */
+	color: rgb(255, 255, 255);
+}
+
+.feature-description {
+	text-align: left;
+	/* Align text to the left */
+
+}
+
+.feature-item {
+	display: flex;
+	align-items: center;
+	gap: 0.8rem;
+	/* Space between icon and text */
+}
+
+
+
+.feature-text,
+.feature-description {
+	color: rgb(210, 210, 210);
+	margin: 0;
+	/* Remove default margin */
+}
+
+.feature-icon {
+	width: 25px;
+	height: 25px;
+	color: rgb(116, 224, 132);
+	/* Control the bullet color */
+}
+
+.feature-item-container {
+
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+	/* Adjust the gap value as needed */
+}
+
+
+/* About the Game and Media Section Styles */
+
+
+
+.steam-button-section .container,
+.video-section,
+.media-section .container,
+.news-section .container,
+.site-footer .container,
+.header-container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.reviews-section .container {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+/*SECTION DIVIDER*/
+.video-section,
+.media-section,
+.reviews-section,
+.site-footer {
+	margin-top: 12.5rem;
+}
+
+
+
+
+
+
+
+.game-description {
+	font-size: 1.2rem;
+	margin-bottom: 1.5rem;
+	color: #666666;
+}
+
+/* Media Section Styles */
+.media-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 12px;
+}
+
+.media-item {
+	overflow: hidden;
+	border-radius: 5px;
+	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.162);
+}
+
+.media-item img {
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	display: block;
+	transition: transform 0.3s;
+}
+
+.media-item img:hover {
+	transform: scale(1.05);
+}
+
+
+
+
+/*REVIEWS SECTION*/
+
+
+.reviews-grid {
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 3.5rem;
+
+}
+
+.review-card {
+
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+	padding: 0;
+}
+
+.review-card-title {
+
+	padding: 0;
+	margin: 0;
+	color: white
+}
+
+.review-author {
+	color: rgb(197, 197, 197);
+	width: 100%;
+	text-align: end;
+	padding: 0;
+	margin: 0;
+}
+
+
+
+
+
+
+/* Footer Section Styles */
+.site-footer {
+	background-color: #161624;
+	padding: 2rem 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.footer-content {
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	max-width: 800px;
+	padding: 0;
+
+
+
+}
+
+.social-media-icons {
+
+
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.social-media-icon-holder {
+
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: auto;
+	padding-top: 1rem;
+
+
+}
+
+.social-media-icon-holder:hover {
+	background-color: #2f94dd;
+}
+
+.social-media-title {
+	color: rgb(255, 255, 255);
+	font-family: "cofo-gothic-variable", sans-serif;
+	font-variation-settings: 'wght' 100;
+
+}
+
+.social-media-image {
+	height: 75px;
+	width: auto;
+
+
+}
+
+.social-media-name {
+	color: white;
+	font-weight: 700;
+
+
+}
+
+.social-media-image,
+.social-media-name,
+.social-media-title {
+	opacity: 0.7;
+}
+
+.subscribe-button-container {
+
+	display: flex;
+	justify-content: center;
+	padding: 3rem 0;
+
+
+}
+
+.subscribe-button {
+	background-color: #2f94dd;
+	color: white;
+	width: 100%;
+	border: none;
+	padding: 0.7rem;
+
+}
+
+.more-footer-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	color: white;
+	gap: 0.5rem;
+
+}
+
+.footer-logo {
+	width: 100px;
+	height: auto;
+}
+
+.footer-legal {
+	text-align: center;
+	padding: 1rem;
+	color: #fff;
+	/* or any text color you prefer */
+}
+
+.footer-legal p {
+	margin: 0;
+}
+
+.footer-legal a {
+	color: #fff;
+	/* or any link color you prefer */
+	text-decoration: none;
+}
+
+.footer-legal a:hover {
+	text-decoration: underline;
+}
+
+/* Typography
+--------------------------------------------- */
+/*OVERLAY FOR CONTRAST*/
+
+/* MALA FONT
+
+Mala Regular
+font-family: "mala", serif;
+font-weight: 400;
+font-style: normal;
+Mala Italic
+font-family: "mala", serif;
+font-weight: 400;
+font-style: italic;
+Mala Bold
+font-family: "mala", serif;
+font-weight: 700;
+font-style: normal;
+Mala Bold Italic
+font-family: "mala", serif;
+font-weight: 700;
+font-style: italic;
+
+
+font-family: "cofo-gothic-variable", sans-serif;
+font-variation-settings: "wght" 400;
+
+*/
+
+/*CUSTOM TEXT STYLES*/
+
+
+.hero-title,
+.hero-subtitle {
+	font-family: "ethnocentric", sans-serif;
+	font-weight: 500;
+	margin: 0;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+.hero-title {
+	font-size: 3rem;
+}
+@media (min-width: 768px) {
+	.hero-title {
+		font-size: 5.5rem;
+	}
+	.hero-subtitle {
+		font-size: 3rem;
+	}
+
+}
+
+.hero-subtitle {
+	font-size: 2rem;
+}
+
+
+/*custom h1 styles*/
+.review-card-title {
+	font-size: 2.4rem;
+	font-family: "cofo-gothic-variable", sans-serif;
+	font-weight: 700;
+
+
+}
+
+.review-author {
+	font-size: 2rem;
+	font-family: "cofo-gothic-variable", sans-serif;
+	font-weight: 100;
+}
+
+
+/*custom h2 styles*/
+.feature-heading,
+.social-media-title {
+	font-size: 2rem;
+	font-family: "cofo-gothic-variable", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+
+
+}
+
+/*custom h3 styles*/
+.feature-description,
+.feature-text {
+	font-size: 1.1rem;
+	font-family: "cofo-gothic-variable", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+
+}
+
+
+
+
+
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+	margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+	display: block;
+}
+/* Normalize */
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Accessibility */
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    clip-path: none;
+    color: #21759b;
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 700;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+}
