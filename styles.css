@@ -5,43 +5,23 @@
 /* Hero Section Styles */
 .hero-section {
 	position: relative;
-	/* Ensure it can be overlaid by the header */
 	height: 100vh;
 	display: flex;
 	color: #fff;
-
-	flex-direction: column;
-	background-size: cover;
-	/* Ensures the background image covers the entire section */
-	background-position: center;
-	/* Centers the background image */
-	background-repeat: no-repeat;
-	/* Prevents the background image from repeating */
 	position: relative;
-	/* Ensure the content is positioned relative to the section */
 	z-index: 1;
-	/* Ensure it is below the header and other content */
+    background-color: #000000;
 }
 
-.hero-section::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.034);
-	/* Adjust opacity as needed */
-	z-index: 1;
-}
+
 
 .hero-content {
 	z-index: 2;
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding-top: 2rem;
+    width: 100%;
+    margin-bottom: 5rem;
 }
 @media (min-width: 768px) {
 	.hero-content {
