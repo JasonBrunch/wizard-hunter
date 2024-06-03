@@ -24,6 +24,7 @@ font-style: italic;
 .debug {
 	outline: 1px solid red;
 }
+
 .debug2 {
 	outline: 1px solid rgb(0, 255, 13);
 }
@@ -32,6 +33,8 @@ font-style: italic;
 body {
 	background-color: #000000;
 }
+
+
 
 /* Hero Section Styles */
 .hero-section {
@@ -42,6 +45,7 @@ body {
 	background-color: #000000;
 	width: 100%;
 }
+
 .hero-content {
 	z-index: 2;
 	display: flex;
@@ -50,22 +54,22 @@ body {
 	width: 100%;
 	height: 100vh;
 	flex-direction: row;
-	
+
 }
 
 
 @media (max-width: 768px) {
-    .hero-content {
-        flex-direction: column;
-    }
+	.hero-content {
+		flex-direction: column;
+	}
 
-    .button-container {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
+	.button-container {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
 }
 
 .hero-text-container {
@@ -77,6 +81,7 @@ body {
 	align-items: center;
 	justify-content: center;
 }
+
 .hero-image-container {
 	height: 100%;
 	width: 100%;
@@ -86,6 +91,12 @@ body {
 	align-items: center;
 }
 
+@media (max-width: 768px) {
+	.hero-image-container {
+		margin-bottom: 4rem;
+	}
+
+}
 
 .button-container {
 	display: flex;
@@ -109,7 +120,8 @@ body {
 	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.179);
 	margin-top: 1rem;
 }
-@media (max-width: 768px){
+
+@media (max-width: 768px) {
 
 	.hero-button {
 		margin-top: 0;
@@ -128,8 +140,8 @@ body {
 
 .hero-text-image,
 .hero-image {
-    max-width: 100%;
-    height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 .button-content {
@@ -215,6 +227,7 @@ body {
 	flex-direction: column;
 
 }
+
 @media (min-width: 768px) {
 	.video-section-container {
 		display: flex;
@@ -228,32 +241,39 @@ body {
 
 
 .video-container {
-    flex: 1;
-    border-radius: 15px;
-    position: relative;
-    overflow: hidden;
-    width: 100%; /* Ensure it takes full width on small screens */
-    padding-top: 56.25%; /* 16:9 aspect ratio */
+	flex: 1;
+	border-radius: 15px;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	/* Ensure it takes full width on small screens */
+	padding-top: 56.25%;
+	/* 16:9 aspect ratio */
 }
 
+
 .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-    border-radius: 15px; /* Match the container's rounded corners */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	border-radius: 15px;
+	/* Match the container's rounded corners */
 }
 
 @media (max-width: 768px) {
-    .video-section-container {
-        flex-direction: column;
-    }
+	.video-section-container {
+		flex-direction: column;
+		gap: 1.5rem;
+	}
 
-    .video-container {
-        height: auto; /* Allow height to adjust based on content */
-    }
+	.video-container {
+		height: auto;
+		/* Allow height to adjust based on content */
+	}
+
 }
 
 
@@ -299,8 +319,16 @@ body {
 .feature-icon {
 	width: 25px;
 	height: 25px;
-	color: rgb(116, 224, 132);
+	color: rgb(86, 99, 238);
 	/* Control the bullet color */
+}
+
+@media (max-width: 768px) {
+	.feature-icon {
+		width: 15px;
+		height: 15px;
+	}
+
 }
 
 .feature-item-container {
@@ -339,6 +367,20 @@ body {
 	margin-top: 12.5rem;
 }
 
+@media (max-width: 768px) {
+
+	.video-section,
+	.site-footer {
+		margin-top: 3rem;
+	}
+
+	.reviews-section,
+	.media-section {
+		margin-top: 6rem;
+
+	}
+}
+
 
 
 
@@ -350,6 +392,8 @@ body {
 	margin-bottom: 1.5rem;
 	color: #666666;
 }
+
+
 
 /* Media Section Styles */
 .media-grid {
@@ -452,6 +496,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
+	flex-wrap: wrap;
 }
 
 .social-media-icon-holder {
@@ -496,6 +541,25 @@ body {
 .social-media-name,
 .social-media-title {
 	opacity: 0.7;
+}
+
+
+@media (max-width: 768px) {
+    .social-media-icons {
+        justify-content: center; /* Center icons on small screens */
+    }
+
+    .footer-content,
+    .subscribe-button-container,
+    .more-footer-content {
+        align-items: center; /* Center align footer contents */
+        text-align: center; /* Center text align */
+    }
+
+    .social-media-icon-holder {
+        width: auto; /* Allow flexible width for icons */
+        margin: 0.5rem; /* Add margin between icons */
+    }
 }
 
 .subscribe-button-container {
@@ -552,6 +616,20 @@ body {
 .footer-legal a:hover {
 	text-decoration: underline;
 }
+
+
+/*GLOBAL STYLES */
+/*GLOBAL PADDING */
+@media (max-width: 768px) {
+
+	.media-section,
+	.video-section-container,
+	.reviews-section,
+	.site-footer {
+		padding: 0 0.8rem;
+	}
+}
+
 
 /* Typography
 --------------------------------------------- */
@@ -619,8 +697,6 @@ font-variation-settings: "wght" 400;
 	font-size: 2.4rem;
 	font-family: "cofo-gothic-variable", sans-serif;
 	font-weight: 700;
-
-
 }
 
 .review-author {
@@ -628,6 +704,18 @@ font-variation-settings: "wght" 400;
 	font-family: "cofo-gothic-variable", sans-serif;
 	font-weight: 100;
 }
+@media (max-width: 768px) {
+	.review-card-title {
+		font-size: 1.8rem;
+	}
+	.review-author {
+		font-size: 1.4rem;
+		margin-top: 1rem;
+
+	}
+}
+
+
 
 
 /*custom h2 styles*/
