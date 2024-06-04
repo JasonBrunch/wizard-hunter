@@ -24,22 +24,27 @@
     -->
 </head>
 
-<body>
+<body class="fade-in">
     <section class="hero-section">
         <div class="hero-content ">
-            <div class="hero-text-container  ">
-                <img src="images/heroText.png" alt="Wizard Hunter 2348" class="hero-text-image">
-                <div class="button-container ">
-                    <a href="#cta" class="hero-button">
-                        <div class="button-content">
-                            <img src="images/steam.svg" alt="Steam Icon" class="steam-icon">
-                            <div class="button-text">
-                                <span class="download-text">DOWNLOAD ON</span>
-                                <span class="steam-text">STEAM</span>
+            <div class="hero-text-container ">
+                <div class="hero-text-wrapper ">
+                    <img src="images/heroText.png" alt="Wizard Hunter 2348" class="hero-text-image ">
+                    <div class="button-container   ">
+                        <a href="https://store.steampowered.com/app/705530/Wizard_Hunter_2348/" class="hero-button" target="_blank">
+                            <div class="button-content">
+                                <img src="images/steam.svg" alt="Steam Icon" class="steam-icon">
+                                <div class="button-text">
+                                    <span class="download-text">DOWNLOAD ON</span>
+                                    <span class="steam-text">STEAM</span>
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
+
+
                 </div>
+
 
 
             </div>
@@ -49,7 +54,7 @@
         </div>
     </section>
 
-    <!-- Steam Button Section 
+   
     <section class=" steam-button-section">
         <div class="container">
             <div class="steam-button-container">
@@ -60,10 +65,10 @@
             </div>
         </div>
     </section>
--->
+
 
     <section class="video-section">
-        <div class="video-section-container">
+        <div class="video-section-container ">
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/16mb52CwafU?si=UC6K2ymIAsqN0jPM" title="YouTube video player"
                     frameborder="0"
@@ -71,12 +76,11 @@
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                 </iframe>
             </div>
-            <div class="feature-container ">
-                <p class="feature-heading">In the hidden corners of the world there lurks a criminal element: Wizards.
-                </p>
+            <div class="feature-container  ">
+                <p class="feature-heading ">In the hidden corners of the world there lurks a criminal element: Wizards.</p>
                 <p class="feature-description">As a member of an elite commando branch of the Immigration Services
                     department, it is your privilege and duty to bring down any demon-summoning wizards.</p>
-                <div class="feature-item-container">
+                <div class="feature-item-container ">
                     <div class="feature-item">
                         <svg class="feature-icon" width="32" height="32" viewBox="0 0 16 16" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -117,13 +121,21 @@
     <section class="media-section">
         <div class="container">
             <div class="media-grid">
-                <div class="media-item"><img src="images/screenshot1.jpg" alt="Screenshot 1"></div>
-                <div class="media-item"><img src="images/screenshot2.jpg" alt="Screenshot 2"></div>
-                <div class="media-item"><img src="images/screenshot3.jpg" alt="Screenshot 3"></div>
-                <div class="media-item"><img src="images/screenshot4.jpg" alt="Screenshot 4"></div>
+                <div class="media-item"><img src="images/screenshot1.jpg" alt="Screenshot 1" onclick="openModal(this)"></div>
+                <div class="media-item"><img src="images/screenshot2.jpg" alt="Screenshot 2" onclick="openModal(this)"></div>
+                <div class="media-item"><img src="images/screenshot3.jpg" alt="Screenshot 3" onclick="openModal(this)"></div>
+                <div class="media-item"><img src="images/screenshot4.jpg" alt="Screenshot 4" onclick="openModal(this)"></div>
             </div>
         </div>
     </section>
+
+   <!-- The Modal -->
+   <div id="myModal" class="modal" onclick="closeModal(event)">
+    <div class="modal-content-container">
+        <span class="close" onclick="closeModal(event)">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+</div>
 
 
 
@@ -137,21 +149,21 @@
             <div class="reviews-grid">
                 <div class="review-card">
 
-                    <h3 class="review-card-title">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-                        dolor sit amet, consectetur adipiscing elit"</h3>
-                    <p class="review-author"> John Doe, IGN</p>
+                    <h3 class="review-card-title">"Playing this game makes you feel like the killer bunny in Monty Python and the Holy Grail. "</h3>
+                    <p class="review-author"> Avypratt, Steam</p>
 
                 </div>
                 <div class="review-card">
 
-                    <h3 class="review-card-title">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</h3>
-                    <p class="review-author "> Jane Doe, GameSpot</p>
+                    <h3 class="review-card-title">"I've learned today that foxes don't like wizards.
+                        This game is hyper violent: trees are murdered."</h3>
+                    <p class="review-author "> Blips, Steam</p>
 
                 </div>
                 <div class="review-card">
 
-                    <h3 class="review-card-title">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</h3>
-                    <p class="review-author"> John Smith, PC Gamer</p>
+                    <h3 class="review-card-title">"A fun indie game with pretty unique style and theming. If a stealth game with wizards that summon wizards that summon demons sounds like it might be your thing, check out Wizard Hunter 2348."</h3>
+                    <p class="review-author"> Free Estrogen, Steam</p>
 
                 </div>
             </div>
@@ -164,8 +176,8 @@
         <div class="container">
             <div class="footer-content">
                 <h2 class="social-media-title">MORE WIZARD HUNTER CONTENT IN THESE PLACES</h2>
-                <div class="social-media-icons">
-                    <div class="social-media-icon-holder">
+                <div class="social-media-icons ">
+                    <div class="social-media-icon-holder ">
                         <a href="https://www.facebook.com" class="social-media-icon">
                             <img src="images/icon-facebook-white.png" alt="Facebook Icon" class="social-media-image">
                         </a>
@@ -184,13 +196,13 @@
                         <p class="social-media-name">INSTAGRAM</p>
                     </div>
                     <div class="social-media-icon-holder">
-                        <a href="https://www.youtube.com" class="social-media-icon">
+                        <a href="https://www.youtube.com/@foxwarriorproductions6533" class="social-media-icon">
                             <img src="images/icon-youtube-white.png" alt="Youtube Icon" class="social-media-image">
                         </a>
                         <p class="social-media-name">YOUTUBE</p>
                     </div>
                     <div class="social-media-icon-holder">
-                        <a href="https://www.twitch.com" class="social-media-icon">
+                        <a href="https://m.twitch.tv/directory/category/wizard-hunter-2348" class="social-media-icon">
                             <img src="images/icon-twitch-white.png" alt="Twitch Icon" class="social-media-image">
                         </a>
                         <p class="social-media-name">TWITCH</p>
@@ -204,12 +216,14 @@
 
             <div class="more-footer-content">
                 <img src="images/foxLogo.png" alt="Fox Productions Logo" class="footer-logo">
-                <p class="footer-description">FOXWARRIOR PRODUCTIONS</p>
-                <div class="footer-legal">
-                    <p>FOXWARRIOR PRODUCTIONS &copy 2024</p>
-                    <p>Privacy Policy</p> |
-                    <p>Terms of Service</p> |
-                    <p>Contact</p>
+                <p class="footer-description">FOXWARRIOR PRODUCTIONS &copy 2024</p>
+                <div class="footer-legal ">
+                    <hr class="bottom-line">
+                    </hr>
+                    <p class="footer-link">PRIVACY POLICY</p>
+                    <hr class="bottom-line">
+                    </hr>
+                    <p class="footer-link">CONTACT</p>
                     </p>
                 </div>
             </div>
